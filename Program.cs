@@ -5,6 +5,7 @@ namespace Work_with_strings
     class Program
     {
         // Method to reverse a string
+
         
         public static string ReverseString(string inputString)
         {
