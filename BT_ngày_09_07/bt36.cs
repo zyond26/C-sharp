@@ -127,7 +127,6 @@ using System.Collections.Generic;
                     Console.WriteLine(ex.Message);
                 }
             }
-
             // Input list2
             Console.WriteLine("Enter students for list2 (23IT6), end with name '#':");
             while (true)
