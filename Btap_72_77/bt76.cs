@@ -16,8 +16,7 @@ class DeleteStatement {
            conn = new SqlConnection(constr);
            conn.Open(); 
            SqlCommand cmd; 
-         // data adapter object is use to 
-        // insert, update or delete commands
+        
         SqlDataAdapter adap = new SqlDataAdapter(); 
         string sql = "";       
         sql = "delete from demo where articleID=3"; 
