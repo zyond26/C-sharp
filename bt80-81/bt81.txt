@@ -1,0 +1,12 @@
+Hai lệnh Thread.Sleep(100); và Task.Delay(100); trong C# đều được sử dụng để tạo ra độ trễ, nhưng chúng hoạt động khác nhau và có các ứng dụng khác nhau:
+
+1. Thread.Sleep(100);
+Namespace: System.Threading
+Chức năng: Dừng hoạt động của luồng hiện tại trong khoảng thời gian được chỉ định (100 milliseconds trong trường hợp này).
+Đồng bộ: Lệnh này là đồng bộ, nghĩa là luồng hiện tại sẽ bị dừng lại hoàn toàn cho đến khi thời gian trễ kết thúc.
+Ứng dụng: Thường được sử dụng trong các ứng dụng đơn luồng hoặc khi cần dừng luồng hiện tại mà không quan tâm đến hiệu suất hoặc tài nguyên.
+2. Task.Delay(100);
+Namespace: System.Threading.Tasks
+Chức năng: Tạo ra một nhiệm vụ bất đồng bộ hoàn thành sau khoảng thời gian được chỉ định (100 milliseconds trong trường hợp này).
+Bất đồng bộ: Lệnh này là bất đồng bộ, nghĩa là nó không chặn luồng hiện tại. Thay vào đó, nó trả về một nhiệm vụ (Task) có thể được chờ (await) mà không ngăn cản các hoạt động khác.
+Ứng dụng: Thường được sử dụng trong các ứng dụng bất đồng bộ, đặc biệt là trong các ứng dụng với giao diện người dùng (UI) hoặc các dịch vụ web để tránh việc ngăn cản luồng chính hoặc luồng UI.
